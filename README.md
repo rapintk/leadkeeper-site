@@ -4,37 +4,12 @@ Static, bilingual (Thai/English) one-page site for LeadKeeper. Plain HTML + CSS,
 no build step, no JavaScript framework — deploys as-is via Hostinger's Git
 integration into `public_html`.
 
-## ⚠️ Not launch-ready: no contact info is published
+## Contact info still hidden
 
-`index.html` and `en/index.html` currently have **no Contact section and no
-CTA buttons in the hero**. The source brief listed LINE OA ID, email, and
-LinkedIn as `[bracketed]` placeholders with no real values, and the brief's
-own hard rule #3 says bracketed values must not be published — so they were
-removed rather than invented.
-
-The problem: this site's stated purpose is letting partner programs and
-prospects verify the business is real *and reach it*. Right now nobody who
-lands on the site can contact LeadKeeper — no LINE button, no email link, no
-LinkedIn. That defeats the primary goal, not a cosmetic gap. Fill in **at
-least one real contact method** (email is the easiest to stand up on the
-domain, e.g. `hello@leadkeeper.site`) before this goes live.
-
-Also removed for the same reason: the founder's name in the "About" section,
-and the business registration number in the footer.
-
-## How to add the missing values
-
-1. Get a working email address, a LINE Official Account ID/link, and the
-   founder's LinkedIn URL.
-2. In `index.html` (Thai) and `en/index.html` (English):
-   - Add a `.cta-row` inside `.hero .wrap` with the LINE and email buttons
-     (see `.btn`, `.btn-primary`, `.btn-secondary` in `assets/style.css`).
-   - Add a `<section id="contact">` before the footer, with a `.contact-list`
-     of `<li><a href="...">...</a></li>` items for LINE, email, LinkedIn.
-   - In "About", reinstate "...founded in 2026 by **[name]**, based in
-     Bangkok."
-3. When the business registration number exists, add it to the footer `<p>`
-   in both files.
+Business registration number is still a placeholder and is not published
+anywhere (footer, both languages). Add it to the footer `<p>` in `index.html`
+and `en/index.html` once you have it — everything else from the original
+brief (founder name, LINE, email, LinkedIn) is live.
 
 ## Editing copy
 
