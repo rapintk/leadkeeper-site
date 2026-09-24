@@ -1,0 +1,13 @@
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Redirect www to apex
+  RewriteCond %{HTTP_HOST} ^www\.leadkeeper\.site$ [NC]
+  RewriteRule ^ https://leadkeeper.site%{REQUEST_URI} [L,R=301]
+</IfModule>
